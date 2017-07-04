@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Activity Stream</title>
+    <link rel="stylesheet" href="{% static "extra/css/site.css" %}">
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script type="text/javascript" src="{% static "extra/js/moment.js" %}"></script>
+    <script type="text/javascript" src="{% static "extra/js/site.js" %}"></script>
+    {% block extra_foot %}
+    {% endblock %}
+  </body>
+</html>

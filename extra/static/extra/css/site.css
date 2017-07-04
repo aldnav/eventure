@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #EEEEEE;
+  font-family: sans-serif;
+}
+
+.container {
+  height: 100%;
+}
+
+.activity-stream {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 640px;
+  height: 100%;
+  padding-top: 40px;
+}
+
+.activity {
+  background-color: #111111;
+  color: #ffffff;
+  width: 360px;
+}
+
+.activity:not(:first-child) {
+  margin-top: 20px;
+}
+
+.activity-footer {
+  background-color: #FF9800;
+  text-align: right;
+  padding: 6px;
+}
+
+.activity-body {
+  padding: 12px;
+}
