@@ -1,6 +1,6 @@
 Eventure: Activity Streams in Django
 ---
-[![Build Status](https://travis-ci.org/aldnav/eventure.svg?branch=master)](https://travis-ci.org/aldnav/eventure)
+[![Build Status](https://travis-ci.org/aldnav/eventure.svg?branch=master)](https://travis-ci.org/aldnav/eventure)  
 Eventure provides generic solution to logging activities.
 
 > "In its simplest form, an activity consists of an actor, a verb, and an object. It tells the story of a person performing an action on or with an object -- "Geraldine posted a photo" or "John shared a video". In most cases these elements will be explicitly declared, but they may also be implied."  
