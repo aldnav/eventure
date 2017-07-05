@@ -18,7 +18,7 @@ class ActivitySerializer(object):
         serialized = {}
         for field in fields:
             try:
-                setattr(serialized, field, getattr(instance, field, None))
+                serialized[field] = getattr(instance, field, None)
             except Exception as e:
                 print e
         return serialized
