@@ -27,7 +27,6 @@ class ActivityModelTestCase(TestCase):
             verb=play,
             title='{} {} {}'.format(self.user1, play, self.game)
         )
-        print activity.title
         self.assertEqual(
             activity.title, '{} {} {}'.format(self.user1, play, self.game))
 
@@ -42,7 +41,6 @@ class ActivityModelTestCase(TestCase):
             title='{} {} {} on {}'.format(
                 self.user2, mention, self.user1, self.video)
         )
-        print activity.title
         self.assertEqual(
             activity.title, '{} {} {} on {}'.format(
                 self.user2, mention, self.user1, self.video))
