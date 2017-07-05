@@ -1,4 +1,4 @@
-Eventure: Atom Activity Streams in Django
+Eventure: Activity Streams in Django
 ---
 Eventure provides generic solution to logging activities.
 
@@ -14,8 +14,8 @@ Specifications is based on the [Atom Activity Streams Spec](http://activitystrea
 ---
 #### Application
 ##### Implied activity shorthand  
-Follows the form **actor verb object**:  
-Activity: "Wendy liked a tweet"
+Follows the form `<actor> <verb> <object>`:  
+Activity: `<wendy> <liked> a <tweet>`
 ```python
 ...
 from activity import Activity, Verb
@@ -28,12 +28,12 @@ activity = Activity.objects.create(
   title='{} {} a {}'.format(user, add, tweet)
 )
 activity.title
-# Wendy liked a tweet
+# wendy liked a tweet
 ```
 
 ##### Full activity entry  
-Follows the form **actor verb object target**:  
-Activity: "Wendy added Only Hope to playlist"
+Follows the form `<actor> <verb> <object> <target>`:  
+Activity: `<wendy> <added> <Only Hope> to <playlist>`
 ```python
 ...
 from activity import Activity, Verb
@@ -47,12 +47,13 @@ activity = Activity.objects.create(
   title='{} {} a {}'.format(user, add, song)
 )
 activity.title
-# Wendy added Only Hope to playlist
+# wendy added Only Hope to playlist
 ```
 
 
 #### TO DO
-* Generate Atom Representations:  
+* Generate Representations:  
+  * JSON
   * XML
   * RSS
   * Metatags
