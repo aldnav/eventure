@@ -11,7 +11,17 @@ from django.contrib.contenttypes.models import ContentType
 
 
 class Activity(models.Model):
-    """An activity consists of an actor, a verb and an object."""
+    """An activity consists of an actor, a verb and an object.
+
+    Implied shorthand format:
+        <actor> <verb> <target> <time>
+    Full entry format:
+        <actor> <verb> <object> <target> <time>
+
+    Examples:
+        <wendy> <liked> a <tweet> <5 minutes ago>
+        <ching> <added> a <Happy Birthday Song> to <playlist> <a minute ago>
+    """
     # Actor.
     actor_type = models.ForeignKey(ContentType, on_delete=models.CASCADE,
                                    related_name='activities_actor')
