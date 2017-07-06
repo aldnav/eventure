@@ -28,3 +28,16 @@
   </div>
 </div>
 {% endblock %}
+
+{% block extra_foot %}
+<script id="activity-template" type="x-tmpl-mustache">
+    <div class="activity">
+      <div class="activity-body">
+        <span class="actor">{{ actor.name }}</span> <span class="verb">{{ verb }}</span> <span>{{ obj }}</span> <span>{{ target }}</span>
+      </div>
+      <div class="activity-footer">
+        <span class="published">{{ published }}</span>
+      </div>
+    </div>
+</script>
+{% endblock %}

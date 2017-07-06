@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
 class Activity(models.Model):
@@ -49,6 +50,10 @@ class Activity(models.Model):
     published = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255, blank=True)
     summary = models.CharField(max_length=255, blank=True)
+
+    @property
+    def published_verbose(self):
+        return naturaltime(self.published)
 
 
 class Verb(models.Model):
